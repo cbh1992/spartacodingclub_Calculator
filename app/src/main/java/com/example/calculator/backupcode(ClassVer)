@@ -1,0 +1,33 @@
+package com.example.calculator
+
+
+fun main() {
+    println("수와 연산을 입력해 주세요.  나눗셈의 나머지를 구하는 연산은 % 입니다")
+    var magicianOne = Calculator(readLine()!!.toInt(), readLine()!!.toString(), readLine()!!.toInt())
+    println("계산 결과는 ${magicianOne.num3}입니다")
+
+}
+
+class Calculator {
+    var num1:Int = 0
+    var operator:String = ""
+    var num2:Int = 0
+    var num3:String
+
+
+    constructor(_num1: Int, _operator: String, _num2: Int) {
+        num1 = _num1
+        operator = _operator
+        num2 = _num2
+        num3 = when (operator){
+            "+"->(num1+num2).toString()
+            "-"->(num1-num2).toString()
+            "*"->(num1*num2).toString()
+            "/"->(num1/num2).toString()
+            "%"->(num1%num2).toString()
+            else -> "잘못된 연산자"
+        }
+
+    }
+
+}

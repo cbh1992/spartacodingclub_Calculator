@@ -1,0 +1,51 @@
+package com.example.calculator
+
+
+fun main() {
+    val num1 = readLine()!!.toInt()
+    val operator = readLine()!!.toString()
+    val num2 = readLine()!!.toInt()
+
+
+    when(operator) {
+        "+" -> {
+            // 덧셈 연산자(+)사용해서 num1과 num2를 더한후에 plusResult에 대입함
+            var plusResult = num1 + num2
+            println("덧셈 결과는 ${plusResult}입니다")
+        }
+        "-" -> {
+            // 뺄셈 연산자(-)사용해서 num1에서 num2를 뺀후에 minusResult에 대입함
+            var minusResult = num1 - num2
+            println("뺄셈 결과는 ${minusResult}입니다")
+        }
+        "*" -> {
+        // 곱셈 연산자(*)사용해서 num1과 num2를 곱한후에 multipleResult에 대입함
+        var multipleResult = num1 * num2
+        println("곱셈 결과는 ${multipleResult}입니다")
+        }
+        "/" -> {
+        // 나눗셈 연산자(/)사용해서 num1에서 num2를 나눈후에 divideResult에 대입함
+        var divideResult = num1 / num2
+        println("나눗셈 결과는 ${divideResult}입니다")
+        // 나머지 연산자(%)사용해서 num1에서 num2를 나눈 나머지를 modResult에 대입함
+        var modResult = num1 % num2
+        println("나눗셈의 나머지는 정수로 ${modResult}입니다")
+        }
+        else -> {
+            // 실행할 코드
+            println("올바른 연산자를 입력해 주세요(+,-,*,/ 만 인식 합니다)")
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
